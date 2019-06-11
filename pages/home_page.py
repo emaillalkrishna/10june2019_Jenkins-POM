@@ -1,4 +1,4 @@
-class Logout:
+class JenkinLogout:
     def __init__(self, driver):
         self.driver = driver
         self.locate_logout_button_by_xpath = "//*[text()='log out']"

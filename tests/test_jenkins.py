@@ -1,10 +1,9 @@
-
 import time
 import pytest
 
 from conftest import test_launch_browser
-from pages.login_page import Login
-from pages.home_page import Logout
+from pages.login_page import JenkinLogin
+from pages.home_page import JenkinLogout
 
 
 @pytest.mark.usefixtures(test_launch_browser)
@@ -12,7 +11,7 @@ class Test_Jenkins_Login_Logout:
 
     def test_login(self):
         driver = self.driver
-        lp = Login(driver)
+        lp = JenkinLogin(driver)
         lp.enter_username()
         lp.enter_password()
         lp.click_signinbutton()
@@ -20,5 +19,5 @@ class Test_Jenkins_Login_Logout:
 
     def test_logout(self):
         driver = self.driver
-        hp = Logout(driver)
+        hp = JenkinLogout(driver)
         hp.click_on_logout()

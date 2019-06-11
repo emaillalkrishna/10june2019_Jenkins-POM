@@ -1,7 +1,8 @@
 import time
 from testdata.data import *
 
-class Login:
+
+class JenkinLogin:
 
     def __init__(self, driver):
         self.driver = driver
