@@ -6,7 +6,7 @@ from pages.login_page import JenkinLogin
 from pages.home_page import JenkinLogout
 
 
-@pytest.mark.usefixtures(test_launch_browser)
+@pytest.mark.usefixtures("test_launch_browser")
 class Test_Jenkins_Login_Logout:
 
     def test_login(self):
